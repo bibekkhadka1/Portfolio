@@ -1,0 +1,125 @@
+.footer {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #ffffffdd;
+  padding: 2rem 1rem;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.footer h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3rem;
+  color: #fff;
+}
+
+.footer-tagline {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #bbbbbb;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.social-icons a {
+  color: #ffffffdd;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #7f5af0;
+  transform: scale(1.2);
+}
+
+.footer-links {
+  margin: 1rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #ffffffcc;
+  transition: all 0.3s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -3px;
+  background: #7f5af0;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.footer-links a:hover {
+  color: #7f5af0;
+  transform: scale(1.05);
+}
+
+.footer-rights {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.scroll-top {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: #7f5af0;
+  border: none;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #7f5af0aa;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.scroll-top:hover {
+  background-color: #5b3fd0;
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-icons {
+    gap: 1rem;
+  }
+
+  .scroll-top {
+    right: 10px;
+    bottom: 10px;
+    padding: 0.5rem;
+  }
+}

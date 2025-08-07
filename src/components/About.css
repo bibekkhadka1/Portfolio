@@ -1,0 +1,122 @@
+.about-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #e0e0e0;
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  animation: fadeInUp 1.2s ease forwards;
+  opacity: 0;
+}
+
+.about-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.about-photo {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #4f46e5;
+  box-shadow: 0 0 20px #4f46e5;
+  transition: transform 0.4s ease;
+}
+
+.about-photo:hover {
+  transform: scale(1.05) rotate(3deg);
+}
+
+.floating-shape {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 80px;
+  height: 80px;
+  background: #4f46e5;
+  opacity: 0.4;
+  border-radius: 20px;
+  filter: blur(10px);
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.gradient-text {
+  font-size: 3rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background: #e52e71;
+  color: white;
+  font-weight: 600;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(229, 46, 113, 0.4);
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ff8a00;
+  box-shadow: 0 6px 20px rgba(255, 138, 0, 0.6);
+  color: white;
+}
+
+/* Animations */
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text {
+    margin-top: 30px;
+  }
+}

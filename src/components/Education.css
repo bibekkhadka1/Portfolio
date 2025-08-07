@@ -1,0 +1,136 @@
+.education-section {
+  background: linear-gradient(135deg, #1f4037, #99f2c8);
+  padding: 60px 20px;
+  color: #f0f0f0;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 50px;
+}
+
+.education-timeline {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 30px;
+  border-left: 3px solid #ff8a00;
+}
+
+.education-card {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    /* 🔄 Changed background color */
+  background: rgba(33, 87, 186, 0.2); 
+
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(179, 188, 237, 0.2);
+}
+
+.education-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 8px 25px rgba(255, 138, 0, 0.7);
+}
+
+.education-marker {
+  position: absolute;
+  left: -12px;
+  top: 15px;
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(45deg, #ff8a00, #e52e71);
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 0 8px #ff8a00;
+  transition: background 0.3s ease;
+}
+
+.education-card:hover .education-marker {
+  background: linear-gradient(45deg, #e52e71, #ff8a00);
+  box-shadow: 0 0 15px #e52e71;
+}
+
+.education-content {
+  padding: 20px;
+}
+
+.degree {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.institution {
+  font-weight: 600;
+  color: #ffd480;
+  display: block;
+  margin-bottom: 4px;
+  font-size: 1.1rem;
+}
+
+.duration {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #ddd;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .education-section {
+    padding: 40px 15px;
+  }
+
+  .section-title {
+    font-size: 2.4rem;
+    margin-bottom: 30px;
+  }
+
+  .education-timeline {
+    padding-left: 15px;
+    border-left-width: 2px;
+  }
+
+  .education-card {
+    padding-left: 20px;
+    margin-bottom: 30px;
+  }
+
+  .education-marker {
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-width: 2px;
+  }
+
+  .degree {
+    font-size: 1.4rem;
+  }
+
+  .institution {
+    font-size: 1rem;
+  }
+}

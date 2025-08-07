@@ -1,0 +1,130 @@
+/* Use default font — inherit from Hero */
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: rgba(15, 32, 39, 0.85); /* dark semi-transparent */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 15px 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: center; /* center nav on desktop */
+  align-items: center;
+}
+
+/* Navigation styles */
+.nav {
+  display: flex;
+  gap: 40px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+  user-select: none;
+  transition: opacity 0.3s ease;
+  align-items: center;
+}
+
+.nav a {
+  color: #e0e0e0;
+  position: relative;
+  padding: 6px 0;
+  text-decoration: none;
+  text-transform: none; /* match hero */
+  transition: color 0.3s ease;
+  font-family: inherit; /* inherit font from hero */
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ff8a00, #e52e71);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover,
+.nav a:focus {
+  color: #ff8a00;
+}
+
+.nav a:hover::after,
+.nav a:focus::after {
+  width: 100%;
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 28px;
+  height: 22px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 30px;
+  z-index: 1100;
+}
+
+.bar {
+  height: 3px;
+  width: 100%;
+  background-color: #e0e0e0;
+  border-radius: 2px;
+  transition: all 0.4s ease;
+  transform-origin: center;
+}
+
+/* Hamburger open (X shape) */
+.hamburger.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive for mobile */
+@media (max-width: 768px) {
+  .header {
+    justify-content: flex-end;
+    padding: 15px 20px;
+  }
+
+  .nav {
+    position: fixed;
+    top: 60px;
+    right: 0;
+    background: rgba(15, 32, 39, 0.95);
+    backdrop-filter: blur(14px);
+    flex-direction: column;
+    width: 260px;
+    height: calc(100vh - 60px);
+    padding-top: 50px;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -3px 0 18px rgba(0,0,0,0.6);
+    font-size: 1.2rem;
+  }
+
+  .nav.nav-open {
+    transform: translateX(0);
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
